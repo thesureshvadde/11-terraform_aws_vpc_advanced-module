@@ -4,10 +4,12 @@ variable "vpc_cidr" {
 
 variable "enable_dns_hostnames" {
   type = bool
+  default = true
 }
 
 variable "enable_dns_support" {
   type = bool
+  default = true
 }
 
 variable "project_name" {
@@ -53,3 +55,22 @@ variable "database_subnet_cidr" {
   }
 }
 
+variable "is_peering_required" {
+  type = bool
+  default = false
+}
+
+variable "requestor_vpc_id" {
+  type = string
+  default = ""
+}
+
+variable "default_route_id" {
+  type = string
+  default = ""
+}
+
+variable "default_vpc_cidr" {
+  type = string
+  default = ""
+}
